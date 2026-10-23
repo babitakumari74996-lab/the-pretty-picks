@@ -1,36 +1,48 @@
-# Render blueprint — client: K2 Ladies Designer (root repo)
+# Render blueprint — client: The Pretty Picks
 # STATIC SITE — no backend service block. This repo is a static frontend only.
 # Do NOT copy this file into another client's repo — each client repo has its
 # own Render service.
 
 services:
   - type: static_site
-    name: k2-ladies-designer-shop
+    name: the-pretty-picks
     runtime: node
     plan: free
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --legacy-peer-deps && npm run build
     publishPath: dist
-    branch: client/k2-ladies-designer
+    branch: main
     envVars:
       # BUG 4.4: env var names are CASE-SENSITIVE on Render — keep these EXACTLY
       # as written (same names in .env.example and the Render dashboard).
       - key: VITE_SHOP_NAME
-        value: K2 Ladies Designer
+        value: The Pretty Picks
       - key: VITE_SHOP_TAGLINE
-        value: Bridal blouses, Aari & Maggam work, and made-to-measure occasion wear
+        value: Sarees, Banarasi styles, cotton and viscose sarees, chudithars and made-to-measure options
       - key: VITE_SHOP_FOUNDED_YEAR
         value: "2010"
       - key: VITE_SHOP_LOGO_PATH
         value: /favicon.ico
       - key: VITE_WHATSAPP_NUMBER
-        value: "919790094017"
+        value: "919876543210"
       - key: VITE_INSTAGRAM_HANDLE
-        value: ""
+        value: the_pretty_pickss
       - key: VITE_CONTACT_EMAIL
-        value: support@k2ladiesdesigner.com
+        value: support@theprettypickss.com
       - key: VITE_WEBSITE_URL
-        value: https://k2ladiesdesigner.com
+        value: https://theprettypickss.com
       - key: VITE_GOOGLE_MAPS_URL
-        value: "https://www.google.com/maps/search/?api=1&query=K2+Ladies+Designer+86-2%2F476A+Venkatasamy+Road+Annapoorna+Layout+New+Siddhapudur+Coimbatore",
+        value: "https://www.google.com/maps/search/?api=1&query=The+Pretty+Picks+India"
       - key: VITE_GOOGLE_MAPS_EMBED_URL
         value: ""
+      - key: VITE_SHOP_STREET
+        value: "India"
+      - key: VITE_SHOP_LOCALITY
+        value: "India"
+      - key: VITE_SHOP_CITY
+        value: "India"
+      - key: VITE_SHOP_REGION
+        value: "India"
+      - key: VITE_SHOP_POSTAL
+        value: "110001"
+      - key: VITE_SHOP_HOURS
+        value: "Monday – Saturday · 10 AM - 8 PM"
